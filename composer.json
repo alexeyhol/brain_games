@@ -1,0 +1,11 @@
+{
+    "name": "alexey/brain_games",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Alexey Kholodov",
+            "email": "alexeyhol@yandex.ru"
+        }
+    ],
+    "require": {}
+}
