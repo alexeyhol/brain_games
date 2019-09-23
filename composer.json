@@ -1,6 +1,7 @@
 {
-    "name": "alexey/brain_games",
+    "name": "alexeyhol/brain_games",
     "type": "project",
+    "bin": ["bin/brain_games"],
     "authors": [
         {
             "name": "Alexey Kholodov",
