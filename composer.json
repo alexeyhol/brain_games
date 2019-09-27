@@ -2,7 +2,7 @@
     "name": "alexeyhol/brain_games",
     "autoload": {
     	"files": [
-    		"src/cli.php"
+    		"src/Cli.php"
     	]
     },
     "type": "project",
