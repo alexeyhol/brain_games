@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 
 <?php
 
@@ -8,3 +8,6 @@ if (file_exists($autoload)) {
     require_once $autoload;
 }
 
+use function BrainGames\Cli\Run;
+
+run();
