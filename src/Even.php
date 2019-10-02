@@ -1,8 +1,9 @@
 <?php
+
 namespace BrainGames\Even;
 
-use function \cli\line;
-use function \cli\prompt;
+use function cli\line;
+use function cli\prompt;
 
 function even()
 {
@@ -13,7 +14,7 @@ function even()
 
     $flag = 0;
 
-    for ($i = 0; $i<3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $randomNumber = mt_rand(1, 1000);
 
         line("\nQuestion: {$randomNumber}");
@@ -37,6 +38,4 @@ function even()
         line(' ');
         line("Congratulations, {$name}!");
     }
-
-    
 }
