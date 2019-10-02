@@ -1,10 +1,14 @@
 {
     "name": "alexeyhol/brain_games",
-    "bin": ["bin/brain_games"],
+    "bin": [
+    	["bin/brain_games"],
+    	["bin/brain-even"]
+    ],
     "type": "project",
     "autoload": {
     	"files": [
-    		"src/Cli.php"
+    		"src/Cli.php",
+    		"src/Even.php"
     	]
     },
     "scripts": {
