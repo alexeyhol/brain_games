@@ -11,15 +11,12 @@ function even()
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
-
     $flag = 0;
 
     for ($i = 0; $i < 3; $i++) {
         $randomNumber = mt_rand(1, 1000);
-
         line("\nQuestion: {$randomNumber}");
         $answer = prompt("Your answer");
-    
         if ($randomNumber % 2 == 0 && $answer == 'yes') {
             line("Correct!");
             $flag++;
