@@ -5,6 +5,9 @@
     	"bin/brain-even"
     ],
     "type": "project",
+    "license": "MIT",
+    "description":"my first php-project",
+    "minimum-stability":"dev",
     "autoload": {
     	"files": [
     		"src/Cli.php",
