@@ -9,8 +9,5 @@ if (file_exists($autoload)) {
 }
 
 use function BrainGames\Cli\Run;
-use function BrainGames\Cli\Even;
-
 
 run();
-even();

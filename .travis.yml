@@ -5,3 +5,5 @@ php:
 install:
   - make install
 
+script:
+  - make lint
