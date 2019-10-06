@@ -1,7 +1,7 @@
 {
     "name": "alexeyhol/brain_games",
     "bin": [
-    	"bin/brain_games",
+    	"bin/brain-games",
     	"bin/brain-even"
     ],
     "type": "project",
@@ -30,7 +30,6 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer":"3.5.0"
-    },
-    "minimum-stability": "dev"
+    }
     
 }
