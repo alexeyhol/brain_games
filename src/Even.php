@@ -5,13 +5,21 @@ namespace BrainGames\Even;
 use function cli\line;
 use function cli\prompt;
 
-function even()
+$name = '';
+$flag = 0;
+
+function hello()
 {
     line("Welcome to Brain Games!");
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+    global $name;
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
-    $flag = 0;
+}
+
+function even()
+{
+    global $flag;
     for ($i = 0; $i < 3; $i++) {
         $randomNumber = mt_rand(1, 1000);
         line("\nQuestion: {$randomNumber}");
@@ -29,6 +37,12 @@ function even()
             );
         }
     }
+}
+
+function result()
+{
+    global $flag;
+    global $name;
     if ($flag == 3) {
         line(' ');
         line("Congratulations, {$name}!");
