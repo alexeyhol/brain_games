@@ -5,9 +5,6 @@ namespace BrainGames\Even;
 use function cli\line;
 use function cli\prompt;
 
-$name = '';
-$flag = 0;
-
 function hello()
 {
     line("Welcome to Brain Games!");
