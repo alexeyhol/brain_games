@@ -9,9 +9,8 @@ if (file_exists($autoload)) {
 }
 
 use function BrainGames\Even\Even;
-use function BrainGames\Even\StartGame;
 
 
 even();
-startGame();
+
 
