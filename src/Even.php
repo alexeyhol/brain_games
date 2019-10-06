@@ -11,6 +11,10 @@ function even()
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
+}
+
+function startGame()
+{
     $flag = 0;
 
     for ($i = 0; $i < 3; $i++) {
@@ -30,9 +34,11 @@ function even()
             );
         }
     }
-
     if ($flag == 3) {
         line(' ');
         line("Congratulations, {$name}!");
     }
 }
+   
+
+   

@@ -6,8 +6,8 @@
     ],
     "type": "project",
     "license": "MIT",
+    "version":"1.0",
     "description":"my first php-project",
-    "minimum-stability":"dev",
     "autoload": {
     	"files": [
     		"src/Cli.php",
