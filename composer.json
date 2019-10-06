@@ -1,12 +1,11 @@
 {
     "name": "alexeyhol/brain_games",
+    "version":"1.0.0",
     "bin": [
     	"bin/brain-games",
     	"bin/brain-even"
     ],
-    "type": "project",
     "license": "MIT",
-    "version":"1.0",
     "description":"my first php-project",
     "autoload": {
     	"files": [
