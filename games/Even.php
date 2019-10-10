@@ -9,6 +9,7 @@ function hello()
 {
     global $name;
     line("Welcome to Brain Games!");
+    line(' ');
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);

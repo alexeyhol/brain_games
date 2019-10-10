@@ -3,14 +3,16 @@
     "version":"1.0.0",
     "bin": [
     	"bin/brain-games",
-    	"bin/brain-even"
+    	"bin/brain-even",
+    	"bin/brain-calc"
     ],
     "license": "MIT",
     "description":"my first php-project",
     "autoload": {
     	"files": [
     		"src/Cli.php",
-    		"src/Even.php"
+    		"games/Even.php",
+    		"games/Calc.php"
     	]
     },
     "scripts": {
