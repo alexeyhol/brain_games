@@ -5,6 +5,16 @@ namespace BrainGames\Calc;
 use function cli\line;
 use function cli\prompt;
 
+function hello()
+{
+    global $name;
+    line("Welcome to Brain Games!");
+    line(' ');
+    line("What is the result of the expression?");
+    $name = prompt("May I have your name?");
+    line("Hello, %s!", $name);
+}
+
 function calc()
 {
     global $name;
@@ -34,6 +44,7 @@ function calc()
         } else {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$operation}'.
             Let's try again, {$name}!");
+            exit();
         }
     }
 }

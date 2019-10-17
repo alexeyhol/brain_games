@@ -4,7 +4,8 @@
     "bin": [
     	"bin/brain-games",
     	"bin/brain-even",
-    	"bin/brain-calc"
+    	"bin/brain-calc",
+    	"bin/brain-gcd"
     ],
     "license": "MIT",
     "description":"my first php-project",
@@ -12,7 +13,8 @@
     	"files": [
     		"src/Cli.php",
     		"games/Even.php",
-    		"games/Calc.php"
+    		"games/Calc.php",
+    		"games/Gcd.php"
     	]
     },
     "scripts": {
