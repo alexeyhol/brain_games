@@ -6,7 +6,8 @@
     	"bin/brain-even",
     	"bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "license": "MIT",
     "description":"my first php-project",
@@ -16,7 +17,8 @@
     		"games/Even.php",
     		"games/Calc.php",
             "games/Gcd.php",
-            "games/Progression.php"
+            "games/Progression.php",
+            "games/Prime.php"
     	]
     },
     "scripts": {
