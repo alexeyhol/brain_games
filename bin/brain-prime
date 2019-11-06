@@ -11,9 +11,11 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Calc\Hello;
+use function BrainGames\Prime\Hello;
+use function BrainGames\Prime\Prime;
 use function BrainGames\Even\Result;
 
 
 hello();
+prime();
 result();
