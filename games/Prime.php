@@ -38,23 +38,24 @@ function prime()
         }
 
         line("\nQuestion: $question");
-        $answer = prompt("Your answer");
+        $answer = (string)prompt("Your answer");
 
-        if ($answer == 'yes' && $result == true) {
+        if ($answer == 'yes' && $result === true) {
             line('Correct!');
             $counter++;
             $flag++;
-        } elseif ($answer == 'no' && $result == false) {
+        } elseif ($answer == 'no' && $result === false) {
             line('Correct!');
             $counter++;
             $flag++;
-        } elseif ($answer == 'yes' && $result == false) {
+        } elseif ($answer == 'yes' && $result === false) {
             line("'{$answer}' is wrong answer ;(. Correct answer was 'no'.
           Let's try again, {$name}!");
             exit();
-        } elseif ($answer == 'no' && $result == true) {
+        } elseif ($answer == 'no' && $result === true) {
             line("'{$answer}' is wrong answer ;(. Correct answer was 'yes'.
           Let's try again, {$name}!");
+            exit();
         }
     }
 }
