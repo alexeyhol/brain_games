@@ -15,55 +15,88 @@ function hello()
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
 }
+$gcd = 0;
+
+function gcd_action($num1, $num2)
+{
+    global $gcd;
+
+    if ($num2 === 0) {
+        return $gcd = $num1;
+    } else {
+        return $gcd = gcd_action($num2, $num1 % $num2);
+    }
+}
 
 function gcd()
 {
     global $name;
     global $flag;
-    $gcd = null;
-    $result = null;
+    global $gcd;
+    $counter = 0;
+    while ($counter < 3) {
+        $num1 = mt_rand(0, 100);
+        $num2 = mt_rand(0, 100);
+    
+        gcd_action($num1, $num2);
 
+        line("\nQuestion: {$num1} {$num2}");
+        $answer = (int)prompt("Your answer");
 
-    for ($i = 0; $i < 3; $i++) {
+        if ($answer == $gcd) {
+            line("Correct!");
+            $flag++;
+            $counter++;
+        } else {
+            line(
+                "'{$answer}' is wrong answer ;(. Correct answer was '{$gcd}'.
+          Let's try again, {$name}!"
+            );
+            exit();
+        }
+    }
+}
+/*function gcd()
+{
+    global $name;
+    global $flag;
+    //$gcd = 0;
+    $counter = 0;
+
+    while ($counter < 3) {
+        $gcd = 0;
         $num1 = mt_rand(0, 100);
         $num2 = mt_rand(0, 100);
 
-        /*if ($num1 === 0) {
-            $gcd = $num1;
-        } elseif ($num2 === 0) {
-            $gcd = $num2;
-        } elseif (($num1 %= $num2) === 0) {
-            $gcd = $num2;
-        } elseif (($num2 %= $num1) === 0) {
-            $gcd = $num1;
-        }*/
-
-    
         if ($num1 === 0) {
-            $gcd = $num2;
+            $gcd = abs($num2);
         } elseif ($num2 === 0) {
-            $gcd = $num1;
-        }
-    
-        for (;;) {
-            if (($num1 %= $num2) === 0) {
-                $gcd = $num2;
-            } elseif (($num2 %= $num1) === 0) {
-                $gcd = $num1;
+            $gcd = abs($num1);
+        } else {
+            for (;;) {
+                if (($num1 %= $num2) === 0) {
+                    $gcd = abs($num2);
+                } elseif (($num2 %= $num1) === 0) {
+                    $gcd = abs($num1);
+                }
             }
+        }
+
+        line("\nQuestion: {$num1} {$num2}");
+        $answer = (int)prompt("Your answer");
+
+        if ($answer == $gcd) {
+            line("Correct!");
+            $flag++;
+            $counter++;
+        } else {
+            line(
+                "'{$answer}' is wrong answer ;(. Correct answer was '{$gcd}'.
+          Let's try again, {$name}!"
+            );
+            exit();
         }
     }
      
-        line("\nQuestion: {$num1} {$num2}");
-        $answer = prompt("Your answer");
-    if ($answer == $gcd) {
-        line("Correct!");
-        $flag++;
-    } else {
-        line(
-            "'{$answer}' is wrong answer ;(. Correct answer was '{$gcd}'.
-          Let's try again, {$name}!"
-        );
-        exit();
-    }
-}
+       
+}*/
