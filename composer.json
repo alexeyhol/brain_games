@@ -1,6 +1,9 @@
 {
     "name": "alexeyhol/brain_games",
     "version":"1.0.0",
+    "type": "project",
+    "description":"console game on php",
+    "license": "MIT",
     "bin": [
     	"bin/brain-games",
     	"bin/brain-even",
@@ -9,8 +12,6 @@
         "bin/brain-progression",
         "bin/brain-prime"
     ],
-    "license": "MIT",
-    "description":"my first php-project",
     "autoload": {
     	"files": [
     		"src/Cli.php",

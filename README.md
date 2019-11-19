@@ -2,6 +2,6 @@
 [![Build Status](https://travis-ci.org/alexeyhol/php-project-lvl1.svg?branch=master)](https://travis-ci.org/alexeyhol/php-project-lvl1)
 [![asciicast](https://asciinema.org/a/zB8rYs7tAVLrvzqWtjaHguHW3.svg)](https://asciinema.org/a/zB8rYs7tAVLrvzqWtjaHguHW3)
 [![asciicast](https://asciinema.org/a/NIwwME33kQNbt6JBsqQTiRGn5.svg)](https://asciinema.org/a/NIwwME33kQNbt6JBsqQTiRGn5)
-[![asciicast](https://asciinema.org/a/uslzbMl7y5GQTbejxVztSmUXM.svg)](https://asciinema.org/a/uslzbMl7y5GQTbejxVztSmUXM)
+[![asciicast](https://asciinema.org/a/DLjB9792OBJQpReGyd0UxMATi.svg)](https://asciinema.org/a/DLjB9792OBJQpReGyd0UxMATi)
 [![asciicast](https://asciinema.org/a/sUueYyJjJBIPIeW30eFyoAcAs.svg)](https://asciinema.org/a/sUueYyJjJBIPIeW30eFyoAcAs)
-[![asciicast](https://asciinema.org/a/cxRAqBYezhDRmN0jv1exImX2q.svg)](https://asciinema.org/a/cxRAqBYezhDRmN0jv1exImX2q)
+[![asciicast](https://asciinema.org/a/nakJu7mEFwu8MAifxa1BEdtJO.svg)](https://asciinema.org/a/nakJu7mEFwu8MAifxa1BEdtJO)
