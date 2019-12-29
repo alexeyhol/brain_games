@@ -5,7 +5,6 @@
     "description":"console game on php",
     "license": "MIT",
     "bin": [
-    	"bin/brain-games",
     	"bin/brain-even",
     	"bin/brain-calc",
         "bin/brain-gcd",
@@ -14,7 +13,7 @@
     ],
     "autoload": {
     	"files": [
-    		"src/Cli.php",
+            "exec/gameEngine.php",
     		"games/even.php",
     		"games/calc.php",
             "games/gcd.php",

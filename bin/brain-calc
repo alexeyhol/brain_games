@@ -11,15 +11,10 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Calc\Hello;
 use function BrainGames\Calc\Calc;
-use function BrainGames\Even\Result;
 
-
-
-hello();
 calc();
-result();
+
 
 
 

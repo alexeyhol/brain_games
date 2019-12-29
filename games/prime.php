@@ -4,22 +4,16 @@ namespace BrainGames\Prime;
 
 use function cli\line;
 use function cli\prompt;
-
-function hello()
-{
-    global $name;
-    line("Welcome to Brain Games!");
-    line(' ');
-    line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
-    line(' ');
-    $name = prompt("May I have your name?");
-    line("Hello, %s!", $name);
-}
+use function Exec\GameEngine\Hello;
+use function Exec\GameEngine\Result;
 
 function prime()
 {
     global $name;
-    global $flag;
+    global $point;
+
+    hello("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+
     $check = 0;
     $counter = 0;
     $result = false;
@@ -43,11 +37,11 @@ function prime()
         if ($answer == 'yes' && $result === true) {
             line('Correct!');
             $counter++;
-            $flag++;
+            $point++;
         } elseif ($answer == 'no' && $result === false) {
             line('Correct!');
             $counter++;
-            $flag++;
+            $point++;
         } elseif ($answer == 'yes' && $result === false) {
             line("'{$answer}' is wrong answer ;(. Correct answer was 'no'.
           Let's try again, {$name}!");
@@ -58,4 +52,5 @@ function prime()
             exit();
         }
     }
+    result();
 }
