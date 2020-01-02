@@ -16,7 +16,6 @@ function progression()
 
     $counter = 0;
     while ($counter < 3) {
-
         $start = mt_rand(1, 50);
         $step = mt_rand(2, 5);
         $result = [];
