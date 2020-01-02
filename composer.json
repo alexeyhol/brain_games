@@ -13,7 +13,7 @@
     ],
     "autoload": {
     	"files": [
-            "exec/gameEngine.php",
+            "src/gameEngine.php",
     		"games/even.php",
     		"games/calc.php",
             "games/gcd.php",

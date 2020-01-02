@@ -1,6 +1,6 @@
 <?php
 
-namespace Exec\GameEngine;
+namespace Src\GameEngine;
 
 use function cli\line;
 use function cli\prompt;

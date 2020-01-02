@@ -4,8 +4,8 @@ namespace BrainGames\Calc;
 
 use function cli\line;
 use function cli\prompt;
-use function Exec\GameEngine\Hello;
-use function Exec\GameEngine\Result;
+use function Src\GameEngine\Hello;
+use function Src\GameEngine\Result;
 
 function calc()
 {
