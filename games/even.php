@@ -9,10 +9,10 @@ use function Src\GameEngine\Result;
 
 function even()
 {
-    global $name;
-    global $point;
 
-    hello("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+    $gameConditions = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+
+    $questionAnswer = [];
 
     for ($i = 0; $i < 3; $i++) {
         $randomNumber = mt_rand(1, 100);
