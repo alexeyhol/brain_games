@@ -8,7 +8,7 @@ use function Src\GameEngine\Engine;
 
 function prime()
 {
-    $gameConditions = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
+    $gameConditions = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".';
 
     $questionAnswer = [];
 
