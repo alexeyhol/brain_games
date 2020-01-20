@@ -4,8 +4,7 @@ namespace BrainGames\Gcd;
 
 use function cli\line;
 use function cli\prompt;
-use function Src\GameEngine\Hello;
-use function Src\GameEngine\Result;
+use function Src\GameEngine\Engine;
 
 $gcd = 0;
 
@@ -22,33 +21,26 @@ function gcd_action($num1, $num2)
 
 function gcd()
 {
-    global $name;
-    global $point;
     global $gcd;
 
-    hello("Find the greatest common divisor of given numbers.");
+    $gameConditions = 'Find the greatest common divisor of given numbers.';
+
+    $questionAnswer = [];
 
     $counter = 0;
+
     while ($counter < 3) {
         $num1 = mt_rand(0, 100);
         $num2 = mt_rand(0, 100);
-    
+
+        $questionAnswer['quest' . $counter] = "$num1 $num2";
+
         gcd_action($num1, $num2);
 
-        line("\nQuestion: {$num1} {$num2}");
-        $answer = (int)prompt("Your answer");
+        $questionAnswer['calc' . $counter] = $gcd;
 
-        if ($answer == $gcd) {
-            line("Correct!");
-            $point++;
-            $counter++;
-        } else {
-            line(
-                "'{$answer}' is wrong answer ;(. Correct answer was '{$gcd}'.
-          Let's try again, {$name}!"
-            );
-            exit();
-        }
+        $counter += 1;
     }
-    result();
+
+    engine($gameConditions, $questionAnswer);
 }
