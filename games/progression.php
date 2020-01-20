@@ -4,15 +4,13 @@ namespace BrainGames\Progression;
 
 use function cli\line;
 use function cli\prompt;
-use function Src\GameEngine\Hello;
-use function Src\GameEngine\Result;
+use function Src\GameEngine\Engine;
 
 function progression()
 {
-    global $name;
-    global $point;
+    $gameConditions = 'Find the greatest common divisor of given numbers.';
 
-    hello("Find the greatest common divisor of given numbers.");
+    $questionAnswer = [];
 
     $counter = 0;
     while ($counter < 3) {
@@ -33,17 +31,11 @@ function progression()
 
         $question = implode(' ', $result);
 
-        line("\nQuestion: $question");
-        $answer = prompt("Your answer");
-        if ($answer == $double_result[$repl]) {
-            line("Correct!");
-            $counter++;
-            $point++;
-        } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$double_result[$repl]}'.
-          Let's try again, {$name}!");
-            exit();
-        }
+        $questionAnswer['quest' . $counter] = $question;
+        $questionAnswer['calc' . $counter] = $double_result[$repl];
+
+        $counter += 1;
     }
-    result();
+
+    engine($gameConditions, $questionAnswer);
 }

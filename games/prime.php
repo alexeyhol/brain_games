@@ -4,15 +4,13 @@ namespace BrainGames\Prime;
 
 use function cli\line;
 use function cli\prompt;
-use function Src\GameEngine\Hello;
-use function Src\GameEngine\Result;
+use function Src\GameEngine\Engine;
 
 function prime()
 {
-    global $name;
-    global $point;
+    $gameConditions = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
 
-    hello("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+    $questionAnswer = [];
 
     $check = 0;
     $counter = 0;
@@ -20,6 +18,7 @@ function prime()
 
     while ($counter < 3) {
         $question = mt_rand(1, 50);
+        $questionAnswer['quest' . $counter] = $question;
 
         for ($i = 1; $i <= $question; $i++) {
             if ($question % $i == 0) {
@@ -29,28 +28,13 @@ function prime()
     
         if ($check == 2) {
             $result = true;
+            $questionAnswer['calc' . $counter] = 'yes';
+        } elseif ($check !== 2) {
+            $questionAnswer['calc' . $counter] = 'no';
         }
 
-        line("\nQuestion: $question");
-        $answer = (string)prompt("Your answer");
-
-        if ($answer == 'yes' && $result === true) {
-            line('Correct!');
-            $counter++;
-            $point++;
-        } elseif ($answer == 'no' && $result === false) {
-            line('Correct!');
-            $counter++;
-            $point++;
-        } elseif ($answer == 'yes' && $result === false) {
-            line("'{$answer}' is wrong answer ;(. Correct answer was 'no'.
-          Let's try again, {$name}!");
-            exit();
-        } elseif ($answer == 'no' && $result === true) {
-            line("'{$answer}' is wrong answer ;(. Correct answer was 'yes'.
-          Let's try again, {$name}!");
-            exit();
-        }
+        $counter += 1;
     }
-    result();
+
+    engine($gameConditions, $questionAnswer);
 }

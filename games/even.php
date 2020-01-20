@@ -4,33 +4,23 @@ namespace BrainGames\Even;
 
 use function cli\line;
 use function cli\prompt;
-use function Src\GameEngine\Hello;
-use function Src\GameEngine\Result;
+use function Src\GameEngine\Engine;
 
 function even()
 {
-
-    $gameConditions = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+    $gameConditions = 'Answer \"yes\" if the number is even, otherwise answer \"no\".';
 
     $questionAnswer = [];
 
     for ($i = 0; $i < 3; $i++) {
-        $randomNumber = mt_rand(1, 100);
-        line("\nQuestion: {$randomNumber}");
-        $answer = prompt("Your answer");
-        if ($randomNumber % 2 == 0 && $answer == 'yes') {
-            line("Correct!");
-            $point++;
-        } elseif ($randomNumber % 2 !== 0 && $answer == 'no') {
-            line("Correct!");
-            $point++;
+        $randNum = mt_rand(1, 100);
+        $questionAnswer['quest' . $i] = $randNum;
+        if ($randNum % 2 == 0) {
+            $questionAnswer['calc' . $i] = 'yes';
         } else {
-            line(
-                "'yes' is wrong answer ;(. Correct answer was 'no'.
-            Let's try again, {$name}!"
-            );
-            exit();
+            $questionAnswer['calc' . $i] = 'no';
         }
     }
-    result();
+
+    engine($gameConditions, $questionAnswer);
 }
