@@ -1,10 +1,13 @@
 <?php
 
-namespace BrainGames\Even;
+namespace brain\games\even;
 
-use function cli\line;
-use function cli\prompt;
-use function Src\GameEngine\Engine;
+use function src\gameEngine\engine;
+
+function isEven($num)
+{
+    return $result = $num % 2 == 0 ? true : false;
+}
 
 function even()
 {
@@ -14,11 +17,10 @@ function even()
 
     for ($i = 0; $i < 3; $i++) {
         $randNum = mt_rand(1, 100);
-        $questionAnswer['quest' . $i] = $randNum;
-        if ($randNum % 2 == 0) {
-            $questionAnswer['calc' . $i] = 'yes';
+        if (isEven($randNum)) {
+            $questionAnswer[$randNum] = 'yes';
         } else {
-            $questionAnswer['calc' . $i] = 'no';
+            $questionAnswer[$randNum] = 'no';
         }
     }
 

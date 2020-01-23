@@ -1,10 +1,8 @@
 <?php
 
-namespace BrainGames\Progression;
+namespace brain\games\progression;
 
-use function cli\line;
-use function cli\prompt;
-use function Src\GameEngine\Engine;
+use function src\gameEngine\engine;
 
 function progression()
 {
@@ -31,9 +29,8 @@ function progression()
 
         $question = implode(' ', $result);
 
-        $questionAnswer['quest' . $counter] = $question;
-        $questionAnswer['calc' . $counter] = $double_result[$repl];
-
+        $questionAnswer[$question] = $double_result[$repl];
+        
         $counter += 1;
     }
 

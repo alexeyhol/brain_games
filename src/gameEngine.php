@@ -6,12 +6,10 @@ use function cli\line;
 use function cli\prompt;
 
 $name = '';
-$point = 0;
 
 function engine(string $gameConditions, array $questionAnswer)
 {
     global $name;
-    global $point;
 
     /* User greeting*/
 
@@ -23,13 +21,12 @@ function engine(string $gameConditions, array $questionAnswer)
 
     /* Playing rounds */
 
-    for ($i = 0; $i < 3; $i++) {
-
-        line("\nQuestion: {$questionAnswer['quest' . $i]}");
+/*
+    for ($i = 0; $i < $s; $i++) {
+        line("\nQuestion: {$questionAnswer[$i]}");
         $answer = prompt("Your answer");
         if ($answer == $questionAnswer['calc' . $i]) {
             line("Correct!");
-            $point++;
         } else {
             line(
                 "'{$answer}' is wrong answer ;(. Correct answer was '{$questionAnswer['calc' . $i]}'.
@@ -38,11 +35,24 @@ function engine(string $gameConditions, array $questionAnswer)
             exit();
         }
     }
+*/
+    foreach ($questionAnswer as $key => $value) {
 
-    /* Scoring, printing results */
-
-    if ($point == 3) {
-        line(' ');
-        line("Congratulations, {$name}!");
+        line("\nQuestion: {$key}");
+        $answer = prompt("Your answer");
+        if ($answer == $value) {
+            line("Correct!");
+        } else {
+            line(
+                "'{$answer}' is wrong answer ;(. Correct answer was '{$value}'.
+            Let's try again, {$name}!"
+            );
+            exit();
+        }
     }
+
+       /* Scoring, printing results */
+
+       line(' ');
+       line("Congratulations, {$name}!");
 }
