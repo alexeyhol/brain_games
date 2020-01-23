@@ -12,7 +12,6 @@ function isPrime($num)
             $check += 1;
         }
     }
-
     return $check == 2 ? true : false;
 }
 

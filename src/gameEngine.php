@@ -1,11 +1,9 @@
 <?php
 
-namespace Src\GameEngine;
+namespace src\gameEngine;
 
 use function cli\line;
 use function cli\prompt;
-
-$name = '';
 
 function engine(string $gameConditions, array $questionAnswer)
 {
@@ -21,23 +19,7 @@ function engine(string $gameConditions, array $questionAnswer)
 
     /* Playing rounds */
 
-/*
-    for ($i = 0; $i < $s; $i++) {
-        line("\nQuestion: {$questionAnswer[$i]}");
-        $answer = prompt("Your answer");
-        if ($answer == $questionAnswer['calc' . $i]) {
-            line("Correct!");
-        } else {
-            line(
-                "'{$answer}' is wrong answer ;(. Correct answer was '{$questionAnswer['calc' . $i]}'.
-            Let's try again, {$name}!"
-            );
-            exit();
-        }
-    }
-*/
     foreach ($questionAnswer as $key => $value) {
-
         line("\nQuestion: {$key}");
         $answer = prompt("Your answer");
         if ($answer == $value) {
