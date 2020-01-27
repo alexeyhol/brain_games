@@ -2,7 +2,7 @@
 
 namespace brain\games\calc;
 
-use function src\gameEngine\engine;
+use function brainGames\gameEngine\engine;
 
 function calc()
 {

@@ -2,7 +2,7 @@
 
 namespace brain\games\prime;
 
-use function src\gameEngine\engine;
+use function brainGames\gameEngine\engine;
 
 function isPrime($num)
 {

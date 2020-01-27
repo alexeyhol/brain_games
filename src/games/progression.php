@@ -2,7 +2,7 @@
 
 namespace brain\games\progression;
 
-use function src\gameEngine\engine;
+use function brainGames\gameEngine\engine;
 
 function progression()
 {

@@ -2,7 +2,7 @@
 
 namespace brain\games\gcd;
 
-use function src\gameEngine\engine;
+use function brainGames\gameEngine\engine;
 
 function gcd_action($num1, $num2)
 {
