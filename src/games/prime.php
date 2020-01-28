@@ -18,9 +18,9 @@ function isPrime($num)
 
 function prime()
 {
-    $gameConditions = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".';
-
     $questionAnswer = [];
+
+    $gameConditions = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".';
 
     $rounds = numberOfRounds();
 
