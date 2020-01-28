@@ -2,6 +2,7 @@
 
 namespace brain\games\progression;
 
+use function brainGames\gameEngine\numberOfRounds;
 use function brainGames\gameEngine\engine;
 
 function progression()
@@ -10,29 +11,27 @@ function progression()
 
     $questionAnswer = [];
 
+    $rounds = numberOfRounds();
+    
     $counter = 0;
-    while ($counter < 3) {
-        $start = mt_rand(1, 50);
-        $step = mt_rand(2, 5);
-        $result = [];
-        $result[0] = $start;
-        $count = 10;
+    while ($counter < $rounds) {
+        $fullProgression = [];
+        $startItem = mt_rand(1, 50);
+        $stepProgression = mt_rand(2, 5);
+        $progressionLength = 10;
         $stub = '..';
-    
-        for ($i = 0; $i <= $count; $i++) {
-            $result[] = $result[$i] + $step;
+
+        for ($i = 0; $i < $progressionLength; $i++) {
+            $fullProgression[$i] = $startItem + ($stepProgression * $i);
         }
-    
-        $repl = array_rand($result);
-        $double_result = $result;
-        $result[$repl] = $stub;
 
-        $question = implode(' ', $result);
+        $index = array_rand($fullProgression);
+        $itemReplacement = $fullProgression[$index];
+        $fullProgression[$index] = $stub;
+        $questionAnswer[implode(' ', $fullProgression)] = $itemReplacement;
 
-        $questionAnswer[$question] = $double_result[$repl];
-        
-        $counter += 1;
+        $counter++;
     }
-
+    
     engine($gameConditions, $questionAnswer);
 }

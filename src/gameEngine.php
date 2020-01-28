@@ -5,10 +5,13 @@ namespace brainGames\gameEngine;
 use function cli\line;
 use function cli\prompt;
 
+function numberOfRounds($number = 3)
+{
+    return $number;
+}
+
 function engine(string $gameConditions, array $questionAnswer)
 {
-    global $name;
-
     /* User greeting*/
 
     line("Welcome to Brain Games!");

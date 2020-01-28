@@ -2,6 +2,7 @@
 
 namespace brain\games\prime;
 
+use function brainGames\gameEngine\numberOfRounds;
 use function brainGames\gameEngine\engine;
 
 function isPrime($num)
@@ -21,17 +22,13 @@ function prime()
 
     $questionAnswer = [];
 
-    $counter = 0;
-    while ($counter < 3) {
+    $rounds = numberOfRounds();
+
+    for ($i = 0; $i < $rounds; $i++) {
         $num = mt_rand(1, 50);
-
-        if (isPrime($num)) {
-            $questionAnswer[$num] = 'yes';
-        } else {
-            $questionAnswer[$num] = 'no';
-        }
-
-        $counter += 1;
+        $y = 'yes';
+        $n = 'no';
+        isPrime($num) ? $questionAnswer[$num] = $y : $questionAnswer[$num] =  $n;
     }
 
     engine($gameConditions, $questionAnswer);
