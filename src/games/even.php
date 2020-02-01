@@ -17,9 +17,7 @@ function even()
 
     for ($i = 0; $i < ROUNDS; $i++) {
         $num = mt_rand(1, 100);
-        $y = 'yes';
-        $n = 'no';
-        isEven($num) ? $questionAnswer[$num] = $y : $questionAnswer[$num] =  $n;
+        isEven($num) ? $questionAnswer[$num] = 'yes' : $questionAnswer[$num] = 'no';
     }
 
     engine($gameConditions, $questionAnswer);

@@ -19,13 +19,13 @@ function engine(string $gameConditions, array $questionAnswer)
 
     /* Playing rounds */
 
-    foreach ($questionAnswer as $key => $value) {
-        line("\nQuestion: {$key}");
-        $answer = prompt("Your answer");
-        if ($answer == $value) {
+    foreach ($questionAnswer as $question => $answer) {
+        line("\nQuestion: {$question}");
+        $userAnswer = prompt("Your answer");
+        if ($userAnswer == $answer) {
             line("Correct!");
         } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$value}'.");
+            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$answer}'.");
             line("Let\'s try again, {$name}!");
             exit();
         }
