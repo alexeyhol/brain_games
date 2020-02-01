@@ -2,7 +2,6 @@
 
 namespace brain\games\progression;
 
-use function brainGames\gameEngine\numberOfRounds;
 use function brainGames\gameEngine\engine;
 
 function progression()
@@ -10,11 +9,9 @@ function progression()
     $gameConditions = 'Find the greatest common divisor of given numbers.';
 
     $questionAnswer = [];
-
-    $rounds = numberOfRounds();
     
     $counter = 0;
-    while ($counter < $rounds) {
+    while ($counter < ROUNDS) {
         $fullProgression = [];
         $startItem = mt_rand(1, 50);
         $stepProgression = mt_rand(2, 5);

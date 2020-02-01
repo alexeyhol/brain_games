@@ -2,7 +2,6 @@
 
 namespace brain\games\calc;
 
-use function brainGames\gameEngine\numberOfRounds;
 use function brainGames\gameEngine\engine;
 
 function calc()
@@ -11,9 +10,7 @@ function calc()
 
     $questionAnswer = [];
 
-    $rounds = numberOfRounds();
-
-    for ($i = 0; $i < $rounds; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $operators = ["+","-","*"];
         $key = array_rand($operators, 1);
         $randNum1 = mt_rand(1, 50);

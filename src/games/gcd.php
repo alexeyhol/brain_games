@@ -2,10 +2,9 @@
 
 namespace brain\games\gcd;
 
-use function brainGames\gameEngine\numberOfRounds;
 use function brainGames\gameEngine\engine;
 
-function calc_gcd($num1, $num2)
+function calcGcd($num1, $num2)
 {
     while ($num1 !== $num2) {
         if ($num1 > $num2) {
@@ -23,12 +22,10 @@ function gcd()
 
     $questionAnswer = [];
 
-    $rounds = numberOfRounds();
-
-    for ($i = 0; $i < $rounds; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $num1 = mt_rand(0, 100);
         $num2 = mt_rand(0, 100);
-        $questionAnswer[$num1 . ' ' . $num2] = calc_gcd($num1, $num2);
+        $questionAnswer[$num1 . ' ' . $num2] = calcGcd($num1, $num2);
     }
 
 

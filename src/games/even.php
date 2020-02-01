@@ -2,12 +2,11 @@
 
 namespace brain\games\even;
 
-use function brainGames\gameEngine\numberOfRounds;
 use function brainGames\gameEngine\engine;
 
 function isEven($num)
 {
-    return $num % 2 == 0 ? true : false;
+    return $num % 2 == 0;
 }
 
 function even()
@@ -16,9 +15,7 @@ function even()
 
     $questionAnswer = [];
 
-    $rounds = numberOfRounds();
-
-    for ($i = 0; $i < $rounds; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $num = mt_rand(1, 100);
         $y = 'yes';
         $n = 'no';

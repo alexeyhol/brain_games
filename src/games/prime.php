@@ -2,7 +2,6 @@
 
 namespace brain\games\prime;
 
-use function brainGames\gameEngine\numberOfRounds;
 use function brainGames\gameEngine\engine;
 
 function isPrime($num)
@@ -22,9 +21,7 @@ function prime()
 
     $gameConditions = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".';
 
-    $rounds = numberOfRounds();
-
-    for ($i = 0; $i < $rounds; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $num = mt_rand(1, 50);
         $y = 'yes';
         $n = 'no';
