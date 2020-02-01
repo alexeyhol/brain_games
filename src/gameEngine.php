@@ -5,10 +5,7 @@ namespace brainGames\gameEngine;
 use function cli\line;
 use function cli\prompt;
 
-function numberOfRounds($number = 3)
-{
-    return $number;
-}
+define('ROUNDS', 3);
 
 function engine(string $gameConditions, array $questionAnswer)
 {
@@ -18,7 +15,7 @@ function engine(string $gameConditions, array $questionAnswer)
     line(' ');
     line($gameConditions);
     $name = prompt("May I have your name?");
-    line("Hello, %s!", $name);
+    line("Hello, %s!, {$name}");
 
     /* Playing rounds */
 
@@ -28,16 +25,13 @@ function engine(string $gameConditions, array $questionAnswer)
         if ($answer == $value) {
             line("Correct!");
         } else {
-            line(
-                "'{$answer}' is wrong answer ;(. Correct answer was '{$value}'.
-            Let's try again, {$name}!"
-            );
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$value}'.");
+            line("Let\'s try again, {$name}!");
             exit();
         }
     }
 
        /* Scoring, printing results */
 
-       line(' ');
-       line("Congratulations, {$name}!");
+       line("\nCongratulations, {$name}!");
 }
