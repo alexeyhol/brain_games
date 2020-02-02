@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/alexeyhol/php-project-lvl1.svg?branch=master)](https://travis-ci.org/alexeyhol/php-project-lvl1)
 
 
-# Консольная интеллектуальная игра Brain Games
+# интеллектуальные консольные игры "Brain Games"
 
 ## Установка
 
