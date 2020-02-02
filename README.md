@@ -6,10 +6,11 @@
 
 ## Установка
 
-Для установки необходимо выполнить команду: *composer global require alexeyhol/brain_games*
+Для установки необходимо выполнить команду: 
+*_composer global require alexeyhol/brain_games_*
 
-После установки нужно так же установить все необходимые зависимости. Для этого в папке с игрой нужно выполнить команду: *composer install*
-
+После установки нужно так же установить все необходимые зависимости. Для этого в папке с игрой нужно выполнить команду: 
+*_composer install_*
 ## Запуск
 
 Для запуска игры необходимо ввести ее название в командой строке
@@ -17,18 +18,23 @@
 ## Игры
 
 * **brain-calc**: простые арифметические действия с числами
+  
 [![asciicast](https://asciinema.org/a/NIwwME33kQNbt6JBsqQTiRGn5.svg)](https://asciinema.org/a/NIwwME33kQNbt6JBsqQTiRGn5)
 ------------------------------------------------------------------------------------------------------------------------
 * **brain-even**: проверка числа на четность
+  
 [![asciicast](https://asciinema.org/a/zB8rYs7tAVLrvzqWtjaHguHW3.svg)](https://asciinema.org/a/zB8rYs7tAVLrvzqWtjaHguHW3)
 ------------------------------------------------------------------------------------------------------------------------
 * **brain-gcd**: поиск нибольшего общего делителя
+  
 [![asciicast](https://asciinema.org/a/DLjB9792OBJQpReGyd0UxMATi.svg)](https://asciinema.org/a/DLjB9792OBJQpReGyd0UxMATi)
 -----------------------------------------------------------------------------------------------------------------------
 * **brain-prime**: простое ли число?
+  
 [![asciicast](https://asciinema.org/a/nakJu7mEFwu8MAifxa1BEdtJO.svg)](https://asciinema.org/a/nakJu7mEFwu8MAifxa1BEdtJO)
 -----------------------------------------------------------------------------------------------------------------------
 * **brain-progression**: поиск части прогрессии
+  
 [![asciicast](https://asciinema.org/a/sUueYyJjJBIPIeW30eFyoAcAs.svg)](https://asciinema.org/a/sUueYyJjJBIPIeW30eFyoAcAs)
 -----------------------------------------------------------------------------------------------------------------------
 
