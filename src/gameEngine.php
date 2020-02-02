@@ -5,6 +5,7 @@ namespace brainGames\gameEngine;
 use function cli\line;
 use function cli\prompt;
 
+/* Number of rounds */
 define('ROUNDS', 3);
 
 function engine(string $gameConditions, array $questionAnswer)
