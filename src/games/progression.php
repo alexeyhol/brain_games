@@ -1,6 +1,6 @@
 <?php
 
-namespace brain\games\progression;
+namespace brainGames\progression;
 
 use function brainGames\gameEngine\engine;
 

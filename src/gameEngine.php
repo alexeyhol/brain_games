@@ -31,7 +31,7 @@ function engine(string $gameConditions, array $questionAnswer)
         }
     }
 
-       /* Scoring, printing results */
+    /* Scoring, printing results */
 
-       line("\nCongratulations, {$name}!");
+    line("\nCongratulations, {$name}!");
 }
