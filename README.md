@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/alexeyhol/php-project-lvl1.svg?branch=master)](https://travis-ci.org/alexeyhol/php-project-lvl1)
 
 
-# интеллектуальные консольные игры "Brain Games"
+# Интеллектуальные консольные игры "Brain Games"
 
 ## Установка
 
@@ -24,18 +24,22 @@
   
 [![asciicast](https://asciinema.org/a/NIwwME33kQNbt6JBsqQTiRGn5.svg)](https://asciinema.org/a/NIwwME33kQNbt6JBsqQTiRGn5)
 ------------------------------------------------------------------------------------------------------------------------
+
 * **brain-even**: проверка числа на четность
   
 [![asciicast](https://asciinema.org/a/zB8rYs7tAVLrvzqWtjaHguHW3.svg)](https://asciinema.org/a/zB8rYs7tAVLrvzqWtjaHguHW3)
 ------------------------------------------------------------------------------------------------------------------------
+
 * **brain-gcd**: поиск нибольшего общего делителя
   
 [![asciicast](https://asciinema.org/a/DLjB9792OBJQpReGyd0UxMATi.svg)](https://asciinema.org/a/DLjB9792OBJQpReGyd0UxMATi)
 -----------------------------------------------------------------------------------------------------------------------
+
 * **brain-prime**: простое ли число?
   
 [![asciicast](https://asciinema.org/a/nakJu7mEFwu8MAifxa1BEdtJO.svg)](https://asciinema.org/a/nakJu7mEFwu8MAifxa1BEdtJO)
 -----------------------------------------------------------------------------------------------------------------------
+
 * **brain-progression**: поиск части прогрессии
   
 [![asciicast](https://asciinema.org/a/sUueYyJjJBIPIeW30eFyoAcAs.svg)](https://asciinema.org/a/sUueYyJjJBIPIeW30eFyoAcAs)
