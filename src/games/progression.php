@@ -11,15 +11,15 @@ function progression()
     $questionAnswer = [];
     
     
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $fullProgression = [];
         $startItem = mt_rand(1, 50);
         $stepProgression = mt_rand(2, 5);
         $progressionLength = 10;
         $stub = '..';
 
-        for ($i = 0; $i < $progressionLength; $i++) {
-            $fullProgression[$i] = $startItem + ($stepProgression * $i);
+        for ($j = 0; $j < $progressionLength; $j++) {
+            $fullProgression[$j] = $startItem + ($stepProgression * $j);
         }
 
         $index = array_rand($fullProgression);
