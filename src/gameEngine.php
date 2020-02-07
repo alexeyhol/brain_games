@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 /* Number of rounds */
-define('ROUNDS', 3);
+define('ROUNDS_COUNT', 3);
 
 function engine(string $gameConditions, array $questionAnswer)
 {
@@ -16,7 +16,7 @@ function engine(string $gameConditions, array $questionAnswer)
     line(' ');
     line($gameConditions);
     $name = prompt("May I have your name?");
-    line("Hello, %s!, {$name}");
+    line("Hello, %s!", $name);
 
     /* Playing rounds */
 

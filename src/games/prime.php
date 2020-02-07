@@ -4,15 +4,14 @@ namespace brainGames\prime;
 
 use function brainGames\gameEngine\engine;
 
-function isPrime($num)
+function isPrime($number)
 {
-    $check = 0;
-    for ($i = 1; $i <= $num; $i++) {
-        if ($num % $i == 0) {
-            $check += 1;
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i == 0) {
+            return false;
         }
     }
-    return $check == 2 ? true : false;
+    return true;
 }
 
 function prime()
@@ -21,11 +20,10 @@ function prime()
 
     $gameConditions = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".';
 
-    for ($i = 0; $i < ROUNDS; $i++) {
-        $num = mt_rand(1, 50);
-        $y = 'yes';
-        $n = 'no';
-        isPrime($num) ? $questionAnswer[$num] = $y : $questionAnswer[$num] =  $n;
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $question = mt_rand(2, 51);
+        $answer = ['yes' => 'yes', 'no' => 'no'];
+        isPrime($question) ? $questionAnswer[$question] = $answer['yes'] : $questionAnswer[$question] =  $answer['no'];
     }
 
     engine($gameConditions, $questionAnswer);

@@ -22,10 +22,10 @@ function gcd()
 
     $questionAnswer = [];
 
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num1 = mt_rand(0, 100);
         $num2 = mt_rand(0, 100);
-        $questionAnswer[$num1 . ' ' . $num2] = calcGcd($num1, $num2);
+        $questionAnswer["{$num1} {$num2}"] = calcGcd($num1, $num2);
     }
 
 

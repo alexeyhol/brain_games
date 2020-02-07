@@ -10,7 +10,7 @@ function calc()
 
     $questionAnswer = [];
 
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $operators = ["+","-","*"];
         $key = array_rand($operators, 1);
         $randNum1 = mt_rand(1, 50);
@@ -18,17 +18,17 @@ function calc()
         $question = "{$randNum1} {$operators[$key]} {$randNum2}";
         switch ($operators[$key]) {
             case "+":
-                $calc = $randNum1 + $randNum2;
+                $correctAnswer = $randNum1 + $randNum2;
                 break;
             case "-":
-                $calc = $randNum1 - $randNum2;
+                $correctAnswer = $randNum1 - $randNum2;
                 break;
             case "*":
-                $calc = $randNum1 * $randNum2;
+                $correctAnswer = $randNum1 * $randNum2;
                 break;
         }
 
-        $questionAnswer[$question] = $calc;
+        $questionAnswer[$question] = $correctAnswer;
     }
     engine($gameConditions, $questionAnswer);
 }
