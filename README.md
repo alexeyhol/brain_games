@@ -40,7 +40,7 @@
 [![asciicast](https://asciinema.org/a/nakJu7mEFwu8MAifxa1BEdtJO.svg)](https://asciinema.org/a/nakJu7mEFwu8MAifxa1BEdtJO)
 -----------------------------------------------------------------------------------------------------------------------
 
-* **brain-progression**: поиск части прогрессии
+* **brain-progression**: поиск члена прогрессии
   
 [![asciicast](https://asciinema.org/a/sUueYyJjJBIPIeW30eFyoAcAs.svg)](https://asciinema.org/a/sUueYyJjJBIPIeW30eFyoAcAs)
 -----------------------------------------------------------------------------------------------------------------------
