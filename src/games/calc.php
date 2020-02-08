@@ -8,7 +8,7 @@ function calc()
 {
     $gameConditions = 'What is the result of the expression?';
 
-    $questionAnswer = [];
+    $questionsAnswers = [];
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $operators = ["+","-","*"];
@@ -28,7 +28,7 @@ function calc()
                 break;
         }
 
-        $questionAnswer[$question] = $correctAnswer;
+        $questionsAnswers[$question] = $correctAnswer;
     }
-    engine($gameConditions, $questionAnswer);
+    engine($gameConditions, $questionsAnswers);
 }

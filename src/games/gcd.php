@@ -20,14 +20,14 @@ function gcd()
 {
     $gameConditions = 'Find the greatest common divisor of given numbers.';
 
-    $questionAnswer = [];
+    $questionsAnswers = [];
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num1 = mt_rand(0, 100);
         $num2 = mt_rand(0, 100);
-        $questionAnswer["{$num1} {$num2}"] = calcGcd($num1, $num2);
+        $questionsAnswers["{$num1} {$num2}"] = calcGcd($num1, $num2);
     }
 
 
-    engine($gameConditions, $questionAnswer);
+    engine($gameConditions, $questionsAnswers);
 }

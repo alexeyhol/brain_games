@@ -13,13 +13,13 @@ function even()
 {
     $gameConditions = 'Answer \"yes\" if the number is even, otherwise answer \"no\".';
 
-    $questionAnswer = [];
+    $questionsAnswers = [];
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $question = mt_rand(1, 100);
         $answer = ['yes' => 'yes', 'no' => 'no'];
-        isEven($question) ? $questionAnswer[$question] = $answer['yes'] : $questionAnswer[$question] = $answer['no'];
+        isEven($question) ? $questionsAnswers[$question] = $answer['yes'] : $questionsAnswers[$question] = $answer['no'];
     }
 
-    engine($gameConditions, $questionAnswer);
+    engine($gameConditions, $questionsAnswers);
 }

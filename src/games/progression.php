@@ -8,10 +8,10 @@ function progression()
 {
     $gameConditions = 'Find the greatest common divisor of given numbers.';
 
-    $questionAnswer = [];
+    $questionsAnswers = [];
     
     
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $fullProgression = [];
         $startItem = mt_rand(1, 50);
         $stepProgression = mt_rand(2, 5);
@@ -23,10 +23,10 @@ function progression()
         }
 
         $index = array_rand($fullProgression);
-        $itemReplacement = $fullProgression[$index];
+        $answer = $fullProgression[$index];
         $fullProgression[$index] = $stub;
-        $questionAnswer[implode(' ', $fullProgression)] = $itemReplacement;
+        $questionsAnswers[implode(' ', $fullProgression)] = $answer;
     }
     
-    engine($gameConditions, $questionAnswer);
+    engine($gameConditions, $questionsAnswers);
 }
